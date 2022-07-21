@@ -2,6 +2,29 @@
 
 // Array of operators
 let operators = ['+', '-', '*', '/']
+const displayInput = document.querySelector('#input')
+displayInput.textContent = ' '
+
+
+// function inputScreen (expression) {
+//     const screenOutput = expression; 
+//     return displayInput.textContent = screenOutput;
+// };
+
+function updateDisplay (expression) {
+    return displayInput.textContent = expression;
+};
+
+// attempting to have a for loop cycle through the buttons container
+// to add each button to an array.
+const buttonsCon = document.querySelector('buttons-container');
+let btnArray = [];
+for (let i = 0; i < buttonsCon.lastChild; i++) {
+    btnArray.push(i);
+
+}
+
+// inputScreen(2 + 1); need it to display expression and not the sum - currently returning 3
 
 // function to operate and call relevant numerical function according to operator
 function operate (num1, num2, operator) {

@@ -33,12 +33,15 @@
 }
 
 #input {
+    height: 60px;
     background-color: rgb(197, 211, 170);
+    text-align: end;
 
 }
-/* #output {
-    background-color: rgb(197, 211, 170);
-} */
+#output {
+    height: 60px;
+    text-align: end;
+}
 .buttons-container {
     display: grid;
     margin: 10px;
@@ -61,6 +64,6 @@
     background-color: rgb(61, 61, 21);
 } */
 
-#equals {
+#equals, #clear, #zero {
     grid-column: span 2;
 }
