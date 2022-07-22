@@ -48,11 +48,12 @@
     width: 430px;
     height: 330px;
     grid-template-columns: repeat(5, 1fr);
+    
     /* background-color: rgb(223, 205, 181); */
    
 }
 
-.button {
+.button-number, .button-operator, .button-function {
     
     background-color: rgb(231, 228, 223);
     font-size: larger;
