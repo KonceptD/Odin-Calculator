@@ -1,8 +1,7 @@
 // * TODO: Update screen for number display - DONE
 // * TODO: Add function for the equals sign to calculate 
-// TODO: Update the display screen when equals sign is pressed
+// * TODO: Update the display screen when equals sign is pressed
 // * TODO: Add functionality for '+', '-', '/', 'x' - DONE
-// UPDATE: Sort out the equals calc, functionality keeps going to 0
 
 // git lol "commit msg" - used a git alias to make adding and commiting easier
 
@@ -116,7 +115,7 @@ keysContainer.addEventListener('click', e => {
             console.log('clear')
             }
             
-
+            // Converts array into number, passes it into the relevant math function for calcs.
         if (action === 'equals') {
             if (currentOperator === "+") {
                 let num1AsNum = Number(num1.join(""));
@@ -178,22 +177,27 @@ keysContainer.addEventListener('click', e => {
     // basic functions for the calc: +, -, * and /
     function addition (addOne, addTwo) {
         let ans = addOne + addTwo
-        return ans;
+        return Math.round(ans);
     };
     
     function subtract (subOne, subTwo) {
         let ans = subOne - subTwo;
-        return ans;
+        return Math.round(ans);
     };
     
     function multiply (mulOne, mulTwo) {
         let ans = mulOne * mulTwo;
-        return ans;
+        return Math.round(ans);
     };
     
     function divide (divOne, divTwo) {
+        if (divTwo === 0) {
+            return false;
+        }
+        else {
         let ans = divOne / divTwo;
-        return ans;
+        return Math.round(ans); 
+    }
     };
     
 
